@@ -1,0 +1,201 @@
+/* #region CONFIGS */
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    font-family: 'Quicksand', sans-serif;
+}
+body {
+    overflow: hidden; /* Hide scrollbars */
+}
+
+colors{
+    --bgPrimaryColor: #fff;
+    --bgSecondaryColor: #000;
+    --primaryColor: #000;
+    --secondaryColor: #fff;
+    --thirdColor: #333533;
+}
+font{
+    --smFont: 1.8em;
+    --mdFont: 2.4em;
+    --fontBold: bold;
+    --fontMedium: 500;
+}
+
+.bgPrimaryColor{
+    background-color: #fff;
+}
+.bgSecondaryColor{
+    background-color: #000;
+}
+.primaryColor{
+    color: #000;
+}
+.secondaryColor{
+    color: #fff;
+}
+.thirdColor{
+    color: #333533;
+}
+
+.smFont{
+    font-size: 1.8em;
+}
+.mdFont{
+    font-size: 2.4em;
+}
+.lgFont{
+    font-size: 6.4em
+}
+.fontMedium{
+    font-weight: 500;
+}
+.fontBold{
+    font-weight: bold;
+}
+/* #endregion  */
+/* ------------------------------ */
+
+
+a{
+    text-decoration: none;
+}
+
+
+.mainContainer{
+    padding: 0 10% 0 10%;
+}
+
+.header{
+    top: 0;
+    width: 100%;
+    height: 15%;
+    
+    display: grid;
+    padding: 3% 0 3% 0;
+    grid-template-columns: 2fr 5fr 2fr 2fr;
+    gap: 2%;
+}
+.header > section{
+    display: flex;
+    align-items: center;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.navLogo{
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+}
+.navLogo a:hover{
+    color: #333533;
+    border-bottom: 1px solid #333533;
+}
+
+.navMenu{
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+.navMenu > span{
+   width: 33%; 
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.navMenu a:hover{
+    border-bottom: 1px solid black;
+}
+
+.navSearch{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+    justify-content: flex-end;
+}
+.navSearch span{
+    cursor: pointer;
+    margin: .2em;
+}
+.search{
+    width: 75%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navSearch input{
+    outline: 0;
+    border: 0;
+    height: 100%;
+    width: 100%;
+    border-bottom: 0px solid #000;
+
+
+}
+.navSearch input:focus{
+    border-bottom: 1px solid #000;
+}
+
+.navBtn{
+    width: 100%;
+    height: 100%;
+    justify-content: flex-end;
+}
+.navBtn > div{
+    width: 75%;
+    height: 100%;
+    border-radius: .2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.home{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+}
+.home > section{
+    display: flex;
+}
+
+.imgHome{
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 80vh;
+}
+.rectImg{
+    position: absolute;
+    background-color: green;
+}
+.bonsaiImg{
+    position: absolute;
+    z-index: 1;
+}
+
+.textHome{
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+.textArea{
+    width: 66.5%;
+}
+.textArea > div{
+    margin: 5% 0 5% 0 ;
+}
+.textBtn, .textBtn:hover{
+    cursor: pointer;
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .2em;
+}
