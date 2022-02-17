@@ -186,7 +186,7 @@ a{
 .home{
     display: grid;
     grid-template-columns: 2fr 2fr;
-    height: 70vh;
+    height: 100%;
 }
 .home > section{
     display: flex;
@@ -196,7 +196,7 @@ a{
     justify-content: center;
     align-items: center;
     position: relative;
-    height: 120%;
+    height: 70vh;
 
 }
 .rectImg{
@@ -231,7 +231,7 @@ a{
 .setaHome1{
     background-image: linear-gradient(#000, #333333, #fff, #fff);
     border-radius: 1em;
-    height: 70%;
+    height: 75%;
 }
 .setaHome2{
     height: 50px;
