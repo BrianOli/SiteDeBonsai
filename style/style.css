@@ -186,6 +186,7 @@ a{
 .home{
     display: grid;
     grid-template-columns: 2fr 2fr;
+    height: 70vh;
 }
 .home > section{
     display: flex;
