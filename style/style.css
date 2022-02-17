@@ -4,6 +4,12 @@
     padding: 0;
     font-size: 10px;
     font-family: 'Quicksand', sans-serif;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 body {
     overflow: hidden; /* Hide scrollbars */
@@ -80,12 +86,6 @@ a{
 .header > section{
     display: flex;
     align-items: center;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 
 .navLogo{
@@ -93,9 +93,14 @@ a{
     height: 100%;
     justify-content: flex-start;
 }
-.navLogo a:hover{
-    color: #333533;
-    border-bottom: 1px solid #333533;
+.navLogo div{
+    background-color: #000;
+    height: 2px;
+    width: 0;
+    transition: width .5s;
+}
+.navLogo span:hover > div{
+    width: 100%;
 }
 
 .navMenu{
@@ -109,8 +114,9 @@ a{
    justify-content: center;
    align-items: center;
 }
-.navMenu a:hover{
-    border-bottom: 1px solid black;
+.navMenu span:hover > a{
+    color: #333533;
+    border-bottom: 1px solid #333533;
 }
 
 .navSearch{
@@ -156,6 +162,12 @@ a{
     align-items: center;
     cursor: pointer;
 }
+.navBtn > div:hover{
+    color: #333533;
+    background-color: rgb(212, 212, 212);
+    border: 1px solid #000;
+    transition: background-color .5s ease-in-out;
+}
 
 .home{
     display: grid;
@@ -172,10 +184,12 @@ a{
     height: 80vh;
 }
 .rectImg{
+    height: 90%;
     position: absolute;
     background-color: green;
 }
 .bonsaiImg{
+    height: 90%;
     position: absolute;
     z-index: 1;
 }
