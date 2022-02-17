@@ -5,8 +5,8 @@ Desenvolvido para estudo
 
 ### Telas
 - Preview Home
-![](./printscreens/HomePreview1)
-![](./printscreens/HomePreview2)
+![](https://github.com/BrianOli/SiteDeBonsai/blob/master/printscreens/HomePreview1.png)
+![](https://github.com/BrianOli/SiteDeBonsai/blob/master/printscreens/HomePreview2.png)
 
 ## Made By Brian Oliveira
 > Designed by Antonio
