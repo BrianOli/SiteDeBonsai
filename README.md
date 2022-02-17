@@ -3,5 +3,10 @@ Site realizado utilizando o sistema de Grid do CSS.
 
 Desenvolvido para estudo
 
+### Telas
+- Preview Home
+![](https://github.com/BrianOli/SiteDeBonsai/blob/master/printscreens/HomePreview1.png)
+![](https://github.com/BrianOli/SiteDeBonsai/blob/master/printscreens/HomePreview2.png)
+
 ## Made By Brian Oliveira
 > Designed by Antonio
