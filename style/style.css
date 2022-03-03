@@ -108,7 +108,7 @@ a{
     justify-content: flex-start;
 }
 .navLogo div{
-    background-color: #000;
+    background-color: #fff;
     height: 2px;
     width: 0;
     transition: width .5s;
@@ -168,20 +168,44 @@ a{
     justify-content: flex-end;
 }
 .navBtn > div{
+    color: #fff;
     width: 75%;
     height: 100%;
-    border-radius: .2em;
+    border-radius: .25em;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: all .2s;
 }
 .navBtn > div:hover{
-    color: #333533;
+    color: var(--primaryColor);
+    scale: 1.2;
     background-color: rgb(212, 212, 212);
     border: 1px solid #000;
-    transition: background-color .5s ease-in-out;
+    filter: brightness(1.02);
 }
+
+.effectHeader{
+    z-index: -1;
+    position: absolute;
+    top: -5em;
+    left: -35em;
+    height: 200px;
+    width: 50vw;
+    border-radius: 0 100px 100px 0;
+    background: linear-gradient(black, rgba(30,30,30,1));
+
+    transform: rotate(-5deg);
+}
+@media screen and (min-width: 1500px) {
+    .effectHeader{
+        top: -3em;
+        left: -55em;
+    }
+    
+}
+
 
 .home{
     display: grid;
@@ -202,13 +226,12 @@ a{
 .rectImg{
     height: 90%;
     position: absolute;
-    background-color: green;
 }
 .bonsaiImg{
     height: 90%;
     position: absolute;
 }
-.setaHome, .setaHome:hover{
+.arrowArea, .arrowArea:hover{
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -218,33 +241,40 @@ a{
     width: 5vh;
     z-index: 1;
 }
-.setaHome svg{
+.arrow{
     position: absolute;
-    bottom: 0%;
-    justify-items: center;
+    bottom: 10px;
+    border-radius: 5px;
+    height: 4em;
     width: 5px;
+    background: linear-gradient(black, white);
+}
+.arrow::before{
+    content: '';
+    height: 2em;
+    width: 5px;
+    border-radius: 5px ;
+    background: linear-gradient(black, white,  white);
 
-}
-.setaHome > .setaHome1{
-    bottom:25%
-}
-.setaHome1{
-    background-image: linear-gradient(#000, #333333, #fff, #fff);
-    border-radius: 1em;
-    height: 75%;
-}
-.setaHome2{
-    height: 50px;
-    border-radius: 1em;
+    position: absolute;
+    bottom: -2px;
+    right: calc(50% + 4px);
+
     transform: rotate(-45deg);
-
 }
-.setaHome3{
-    height: 50px;
-    border-radius: 1em;
+.arrow::after{
+    content: '';
+    height: 2em;
+    width: 5px;
+    border-radius: 5px ;
+    background: linear-gradient(black, white, white);
+
+    position: absolute;
+    bottom: -2px;
+    left: calc(50% + 4px);
+
     transform: rotate(45deg);
 }
-
 
 .textHome{
     justify-content: center;
@@ -265,3 +295,18 @@ a{
     align-items: center;
     border-radius: .2em;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
