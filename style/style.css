@@ -29,44 +29,51 @@ body {
     overflow-x: hidden; /* Hide scrollbars */
 }
 
-colors{
+/* Variables */
+:root{
+/* COLORS */
     --bgPrimaryColor: #fff;
     --bgSecondaryColor: #000;
     --primaryColor: #000;
     --secondaryColor: #fff;
     --thirdColor: #333533;
-}
-font{
+    
+/* FONTS */
     --smFont: 1.8em;
     --mdFont: 2.4em;
+    --lgFont: 3.6em;
+    --xLgFont: 6.4em;
     --fontBold: bold;
     --fontMedium: 500;
 }
 
 .bgPrimaryColor{
-    background-color: #fff;
+    background-color: var(--bgPrimaryColor);
 }
 .bgSecondaryColor{
-    background-color: #000;
+    background-color: var(--bgSecondaryColor);
 }
 .primaryColor{
-    color: #000;
+    color: var(--primaryColor);
 }
 .secondaryColor{
-    color: #fff;
+    color: var(--secondaryColor);
 }
 .thirdColor{
-    color: #333533;
+    color: var(--thirdColor);
 }
 
 .smFont{
-    font-size: 1.8em;
+    font-size: var(--smFont);
 }
 .mdFont{
-    font-size: 2.4em;
+    font-size: var(--mdFont);
 }
 .lgFont{
-    font-size: 6.4em
+    font-size: var(--lgFont)
+}
+.xLgFont{
+    font-size: var(--xLgFont);
 }
 .fontMedium{
     font-weight: 500;
@@ -103,7 +110,7 @@ a{
 }
 
 .navLogo{
-    width: 100%;
+    width: fit-content;
     height: 100%;
     justify-content: flex-start;
 }
@@ -115,6 +122,7 @@ a{
 }
 .navLogo span:hover > div{
     width: 100%;
+
 }
 
 .navMenu{
@@ -127,6 +135,9 @@ a{
    display: flex;
    justify-content: center;
    align-items: center;
+}
+.navMenu > span > .active{
+    border-bottom: 1px solid black;
 }
 .navMenu span:hover > a{
     color: #333533;
@@ -161,7 +172,6 @@ a{
 .navSearch input:focus{
     border-bottom: 1px solid #000;
 }
-
 .navBtn{
     width: 100%;
     height: 100%;
@@ -211,9 +221,12 @@ a{
     display: grid;
     grid-template-columns: 2fr 2fr;
     height: 100%;
+    margin-top: 5em;
 }
 .home > section{
     display: flex;
+    height: 100%;
+    
 }
 
 .imgHome{
@@ -231,6 +244,7 @@ a{
     height: 90%;
     position: absolute;
 }
+
 .arrowArea, .arrowArea:hover{
     cursor: pointer;
     display: flex;
@@ -244,15 +258,15 @@ a{
 .arrow{
     position: absolute;
     bottom: 10px;
-    border-radius: 5px;
-    height: 4em;
-    width: 5px;
-    background: linear-gradient(black, white);
+    border-radius: 5px 5px 100% 100%;
+    height: 6em;
+    width: 4px;
+    background: linear-gradient(transparent,black, white);
 }
 .arrow::before{
     content: '';
     height: 2em;
-    width: 5px;
+    width: 4px;
     border-radius: 5px ;
     background: linear-gradient(black, white,  white);
 
@@ -265,7 +279,7 @@ a{
 .arrow::after{
     content: '';
     height: 2em;
-    width: 5px;
+    width: 4px;
     border-radius: 5px ;
     background: linear-gradient(black, white, white);
 
@@ -287,26 +301,42 @@ a{
 .textArea > div{
     margin: 5% 0 5% 0 ;
 }
-.textBtn, .textBtn:hover{
+.textBtn{
     cursor: pointer;
-    width: 33%;
+    width: max-content;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: .2em;
+    transition: all .2s;
+}
+.textBtn:hover{
+    scale: 1.05;
 }
 
 
 
+.about{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    height: 100%;
+    margin-top: 10em;
+}
+.about > section{
+    display: flex;
+    height: 100%;
+}
 
+.imgAbout > img{
+    position: absolute;
+    left: 0;
 
+    object-fit: cover;
 
+    width: 50em;
+    height: auto;
+}
 
-
-
-
-
-
-
-
-
+.textAbout{
+    background-color: red;
+}
