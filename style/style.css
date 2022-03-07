@@ -4,12 +4,6 @@
     padding: 0;
     font-size: 10px;
     font-family: 'Quicksand', sans-serif;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 ::-webkit-scrollbar {
     width: 1em;
@@ -27,22 +21,28 @@
 
 body {
     overflow-x: hidden; /* Hide scrollbars */
+    margin-bottom: 50em;
 }
 
 /* Variables */
 :root{
+
+    scroll-behavior: smooth;
+
 /* COLORS */
     --bgPrimaryColor: #fff;
     --bgSecondaryColor: #000;
+    --bgThirdColor: #232323;
+
     --primaryColor: #000;
     --secondaryColor: #fff;
     --thirdColor: #333533;
     
 /* FONTS */
-    --smFont: 1.8em;
-    --mdFont: 2.4em;
-    --lgFont: 3.6em;
-    --xLgFont: 6.4em;
+    --smFont: 1.8rem;
+    --mdFont: 2.4rem;
+    --lgFont: 3.6rem;
+    --xLgFont: 6.4rem;
     --fontBold: bold;
     --fontMedium: 500;
 }
@@ -90,8 +90,9 @@ a{
 }
 
 
-.mainContainer{
+main{
     padding: 0 10% 0 10%;
+    margin-bottom: 50rem;
 }
 
 .header{
@@ -303,16 +304,15 @@ a{
 }
 .textBtn{
     cursor: pointer;
-    width: max-content;
+    width: 45%;
+    height: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: .2em;
-    transition: all .2s;
+    transition: background-color .2s;
 }
-.textBtn:hover{
-    scale: 1.05;
-}
+
 
 
 
@@ -320,7 +320,7 @@ a{
     display: grid;
     grid-template-columns: 2fr 2fr;
     height: 100%;
-    margin-top: 10em;
+    margin: 15em 0 0 0;
 }
 .about > section{
     display: flex;
@@ -336,7 +336,18 @@ a{
     width: 50em;
     height: auto;
 }
+.textAbout .textArea{
+    flex: 6;
+    text-justify: auto;
+}
+.textAbout .text{
+    line-height: 3rem;
+}
 
-.textAbout{
-    background-color: red;
+.carousel{
+    background-color: var(--bgThirdColor);
+    position: absolute;
+    margin: 15rem 0 15rem 0;
+    left: 0;
+    width: 100vw;
 }
