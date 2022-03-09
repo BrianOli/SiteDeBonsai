@@ -39,6 +39,7 @@ body {
     --thirdColor: #333533;
     
 /* FONTS */
+    --smSmFont: 1.4rem;
     --smFont: 1.8rem;
     --mdFont: 2.4rem;
     --lgFont: 3.6rem;
@@ -63,6 +64,9 @@ body {
     color: var(--thirdColor);
 }
 
+.smSmFont{
+    font-size: var(--smSmFont);
+}
 .smFont{
     font-size: var(--smFont);
 }
@@ -92,7 +96,6 @@ a{
 
 main{
     padding: 0 10% 0 10%;
-    margin-bottom: 50rem;
 }
 
 .header{
@@ -345,9 +348,92 @@ main{
 }
 
 .carousel{
-    background-color: var(--bgThirdColor);
     position: absolute;
-    margin: 15rem 0 15rem 0;
     left: 0;
+    
+    height: auto;
+    min-height: 25rem;
     width: 100vw;
+    margin: 15rem 0;
+    padding-bottom: 5rem;
+    background-color: var(--bgThirdColor);
+    box-shadow: inset 0 0 5rem black;
 }
+.carousel span{ /* Title Carousel */    
+    display: inline-block;
+
+    padding: 2rem 0;
+    text-align: center;
+    width: 100%;
+}
+
+.prevBtn{
+    position: absolute;
+    left: 5rem;
+    top: 46.5%;
+
+    width: 50px;
+    height: 50px;
+    margin-bottom: 50%;
+    background-color: var(--bgPrimaryColor);
+
+    clip-path: polygon(83% 10%, 83% 0%, 0% 50%, 83% 100%, 83% 90%, 15% 50%);
+}
+.prevBtn:hover{
+    background-color: rgba(255,255,255,.5);
+    cursor:pointer
+}
+
+.nextBtn{
+    position: absolute;
+    right: 5rem;
+    top: 46.5%;
+
+    width: 50px;
+    height: 50px;
+    margin-bottom: 50%;
+    background-color: var(--bgPrimaryColor);
+
+    clip-path: polygon(17% 10%, 17% 0%, 100% 50%, 17% 100%, 17% 90%, 83% 50%);
+}
+.nextBtn:hover{
+    background-color: rgba(255,255,255,.5);
+    cursor:pointer
+}
+
+.carouselArea{
+    height: 50px;
+    width: 50px;
+    background-color: blue;
+    width: 75vw;
+    height: 50vh;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+
+
+
+
+
+.carouselBtn{
+    display: flex;
+    
+    height: 50px;
+    width: 20vw;
+
+    margin: 0 auto;
+
+    border-radius: 15px;
+    border: 2px solid white;
+
+}
+.carouselBtn:hover{
+    cursor: pointer;
+    filter: brightness(75%);
+}
+
+.carouselBtn a{
+    margin: auto auto;
+}
+
